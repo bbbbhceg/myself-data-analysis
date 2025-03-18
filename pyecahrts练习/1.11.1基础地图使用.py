@@ -2,7 +2,7 @@
 地图可视化的基本使用
 """
 from pyecharts.charts import Map
-from pyecharts.options import  VisualMapOpts
+from pyecharts.options import  VisualMapOpts,TitleOpts
 
 # 准备地图对象
 map = Map()
@@ -33,7 +33,18 @@ map.set_global_opts(
         ]
     )
 )
+
+map.set_global_opts(
+    title_opts=TitleOpts(
+        title="这是标题",
+        is_show= True,
+        subtitle="这是副标题",
+        pos_top="10",
+        pos_left="20"
+    )
+
+)
 # 绘图
-map.render()
+map.render("render1_11_1.html")
 
 

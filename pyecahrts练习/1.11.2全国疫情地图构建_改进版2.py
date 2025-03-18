@@ -1,3 +1,7 @@
+# 整体步骤：
+# 读取数据，清洗数据，准备数据（对应格式）
+# 创建图表对象，增添数据，全局or系列配置
+# 渲染地图
 import json
 from pyecharts.charts import Map
 from pyecharts.options import *
@@ -35,7 +39,7 @@ for province_data in data_dict["areaTree"][0]["children"]:   # 控制循环次�
             city_data["name"] += "市"  # 在市名后加上"市"
 
 
-# 准备数据列表
+# 准备数据列表，也就是将清洗完毕的数据，整装成符合格式的形式
 province_data_list = data_dict["areaTree"][0]["children"]
 data_list = []
 for province_data in province_data_list:

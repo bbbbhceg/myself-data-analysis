@@ -22,7 +22,7 @@ for province_data in province_data_list:
     province_confirm = province_data["total"]["confirm"]   # 确诊人数
     data_list.append((province_name,province_confirm))
 
-# print(data_list) 可以输出检测一下
+# print(data_list) #可以输出检测一下
 # 创建地图对象
 map = Map()
 # 添加数据
