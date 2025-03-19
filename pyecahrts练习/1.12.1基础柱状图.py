@@ -2,7 +2,7 @@
 基础柱状图
 """
 from pyecharts.charts import  Bar
-from pyecharts.options import  *
+from pyecharts.options import  LabelOpts
 
 # 构建柱状图对象
 bar = Bar()
@@ -17,5 +17,23 @@ bar.reversal_axis()
 
 # 绘制图表
 bar.render("基础柱状图.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
