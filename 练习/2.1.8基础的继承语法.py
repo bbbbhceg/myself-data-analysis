@@ -1,37 +1,28 @@
 """
-设计一个手机类，内部包含:
-
+继承的应用场景多是更新迭代，
+不想直接粘贴代码然后添加，而是直接使用继承语法
+这样的选择有更高的自由度
+继承的基础语法：
+就是在新的类（即，子类）名称后加个括号，然后将需要继承的父类名称添加进去
+继承还可以分为多继承和单继承
 (提示：Ctrl键+10可缩略大段独立注释)
 """
 class Phone:
-    __is_5g_enable = False
+    IMEI = None
+    producer = "bmw"
 
-    # 私有成员方法
-    def __check_5g(self):
-        if self.__is_5g_enable:
-            print("5g开启")
-        else:
-            print("5g关闭，使用4g网络")
+    def cal_by_4g(self):
+        print("正在进行4g通话")
 
-    # 私有成员方法
-    def call_by_5g(self):
-        self.__check_5g()
-        print("正在通话中")
+class Phone2025(Phone):
+    face_id = "1001"   # 增加面部识别ID
 
-# 创建类对象,一定记得括号
-phone1 = Phone()
-phone1.call_by_5g()
-for i in range(1, 4):  # 假设需要录入3位学生
-    print(f"当前录入第{i}位学生信息，总共需要录入3位学生的信息")
-    student = Student(
-        name_=input("请输入学生姓名："),
-        age_=input("请输入学生的年龄："),
-        gender_=input("请输入学生的性别："),
-        city_=input("请输入学生的来源城市：")
-    )
-    students.append(student)  # 将学生对象添加到列表中
-    print(f"学生{i}信息录入完成，信息为：【学生姓名：{student.name}，年龄：{student.age}, 性别：{student.gender}, 来源城市：{student.city}】")
+    def cal_by_5g():
+        print('2025年新功能，5g通话启动')
+# 创建一个子类的类对象
+phone_1 = Phone2025()
+print(phone_1.producer)  # 展示子类可以调用父类方法
+phone_1.cal_by_4g()   # 展示子类可以调用父类方法
+phone_1.cal_by_5g()
 
 
-
-# 反思，这个就是想要实现，在用户调用手机的打电话功能时，进行通话状态/信号检查
