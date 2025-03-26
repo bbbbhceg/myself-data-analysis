@@ -12,11 +12,12 @@ class Phone2025(Phone):
     def cal_by_5g(self):
         print("开启CPU单核模式，确保通话的时候省电")
         print("使用5g网络进行通话")
-        print("关闭CPU单核模式，确保性腊")
+        print(f"父类的品牌是:",Phone.producer)    # 方式1
+        print(f"父类的品牌是:",super().producer)  # 方式2
+        print("关闭CPU单核模式，确保性能")
 
 phone = Phone2025()
 phone.cal_by_5g()
 print(phone.producer)
-
 aaa = Phone
 print(aaa.producer)
