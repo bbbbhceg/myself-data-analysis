@@ -8,12 +8,13 @@ score =([
   [76,87,75,67,86],
   [70,79,84,67,84],
   [94,92,93,67,64],
-  [86,85,83,67,80]])
+  [86,85,83,67,80]
+])
 
 score = np.array(score)
 # print(type(score))  # 输出检测表明，已经是<class 'numpy.ndarray'>
 
-# numpy.shape 显示目标数组的形状，数据类型为元组
+# numpy.shape 显示目标数组的形状，数据类型为元组,一维元组不能单独一个数值，需要加个逗号，以告诉系统这个是元组
 print(score.shape)  # (8, 5)
 print(type(score.shape)) # <class 'tuple'>
 
@@ -26,7 +27,7 @@ print(score.size)  # 40
 # numpy.dtype  用来显示数组元素的类型
 print(score.dtype)  # int64
 
-# numpy.itemsize 用来显示一个数组
+# numpy.itemsize 用来显示一个数组中一个数组元素的长度（字节)，一个字节是8位无符号存储范围是0到255
 print(score.itemsize)   # 8
 """
 在 NumPy 中，itemsize 属性表示数组中每个元素所占的字节数。
