@@ -56,3 +56,15 @@ print(my_list6)
 my_list = [1,2,3]
 my_list.extend([4,5,6])
 print(my_list)  # 结果:[1，2，3，4，5，6]
+
+list000 = [0,1,2,3,4,5,6]
+list002 = ["a","b","c","d","e"]
+list000[-1] = 999
+print(list000)   # [0,1,2,3,4,5,999]
+list000.extend(list002[:3])   # 列表的extend方法可以操作指定数据容器的指定部分。
+print(list000)   # [0,1,2,3,4,5,999,'a', 'b', 'c']
+print(list002) # ['a', 'b', 'c', 'd', 'e']
+
+
+
+
