@@ -22,6 +22,20 @@ print(len(arr_1))  # 4
 array_1 = numpy.zeros(shape=(3,4))
 print(array_1)
 print(array_1.dtype)
+
+
+ar1 = numpy.ones(shape = (3,3),dtype = numpy.int8)
+"""
+np.ones(shape, dtype=None, order='℃')  float64类型
+
+shape = (m, n) # m行n列二维数组
+shape = (m)    # m个元素的一维数组  [1,2,3]
+shape = (m,)   # m个元素的维数组
+
+shape = (m,1)  # m行1列 二维数组   [[1],[2],[:3]]
+shapc = (1, n) # 1行m列二维数组    [[1,2,3]]
+"""
+
 """
 [
   [0. 0. 0. 0.]
@@ -42,3 +56,23 @@ array_2:
 float64
 """
 
+# full方法
+ar111 = numpy.full(shape=(3,3),fill_value= 6)
+print(ar111)
+"""
+[[6 6 6]
+ [6 6 6]
+ [6 6 6]]
+"""
+
+
+# 生成单位矩阵数组
+ar123 = numpy.eye(N = 5)
+print(ar123)
+"""
+[[1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+"""
