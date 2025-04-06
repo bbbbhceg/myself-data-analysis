@@ -48,6 +48,24 @@ new_list2 = new_list[1].replace("来","")   # 删掉“来”
 
 
 
+"""
+
+str = "0123456789"
+#  即使结束下标超过索引页不会报错，甚至连警告页没有.list tuple  str都是如此
+aaa =str[3:12]
+print(aaa)   # 3456789
+
+# 结束下标是78的起始下标是7，所以等同于此处是7
+bbb = str[str.index("234"):str.index("78")]
+print(bbb)  # 23456
+
+# 234的起始下标是2，所以此处等同于2
+ccc = str[str.index("78"):str.index("234"):-1]
+print(ccc)  # 76543
+
+"""
+
+
 
 
 
