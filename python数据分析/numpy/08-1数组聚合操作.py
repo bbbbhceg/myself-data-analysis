@@ -6,10 +6,31 @@ arr_1 = numpy.random.randint(0,10,size=10)
 # 求累加和
 sum_arr_1 = arr_1.sum()
 print("求累加和:",sum_arr_1)  # 会直接出现是个数值的累加和
+# 求多维数组的累加和，但是axis= 0  or 1
+arr_56 = numpy.random.randint(1,11,size = (2,3))
+print("多维数组",arr_56)
+print("多维数组求和",arr_56.sum())
+print("多维数组的累加和，但是axis= 0",arr_56.sum(axis=0))
+print("多维数组的累加和，但是axis= 1",arr_56.sum(axis=1))
 
-# 求平均值
+
+
+# 求平均值方法1
 mean_arr_1 = arr_1.mean()
 print("求平均值:",mean_arr_1)
+# 求均值方法2
+avera_arr = numpy.average(arr_1)
+print("average方法求的平均值：",avera_arr)
+"""
+这个average方法，之所以一定要在numpy下，是因为它的用法更为复杂。
+例如他可以进行权重的赋值
+arr = np.array([1, 2, 3, 4, 5])
+weights = np.array([1, 1, 1, 1, 1])  # 均匀权重
+print(np.average(arr, weights=weights))  # 输出：3.0
+
+weights = np.array([1, 2, 3, 4, 5])  # 不均匀权重
+print(np.average(arr, weights=weights))  # 输出：3.6666666666666665
+"""
 
 # 求最大值
 max_arr_1 = arr_1.max()
@@ -47,3 +68,8 @@ data = numpy.arange(1,11,step = 1)
 percet_data = numpy.percentile(data,[0.25,0.5,0.75])
 print("数据的四分位数值",percet_data)
 
+
+# 数组的次方。结果是将每一个元素进行次方运算
+aaaaaa = numpy.power(arr_1,3)  # 三次方
+#  或者这样也可以 arr_1 **3
+print(aaaaaa)
