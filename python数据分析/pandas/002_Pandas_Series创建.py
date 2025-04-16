@@ -2,7 +2,8 @@ import numpy as np
 import pandas
 
 # 1.创建series的方法
-# 由列表创建
+# 1.1由列表或者数组
+# 1.1.1由列表创建
 list_1 = [1,22,333,4444]
 s_1 = pandas.Series(list_1)  # 注意格式，注意大小写
 print(s_1)
@@ -14,7 +15,7 @@ print(s_1)
 dtype: int64
 """
 
-# 由数组创建
+# 1.1.2由数组创建
 arr_1 = np.array(list_1)
 s_2 = pandas.Series(arr_1)
 print(s_2)
@@ -27,6 +28,7 @@ print(s_2)
 dtype: int64
 """
 
+# 创建Series之后，就是查看Series了
 # 分别查看series的索引（series）和值（values）
 print(s_1.index)   # RangeIndex(start=0, stop=4, step=1)
 # 如果觉得上边这个，输出索引的方式不直观，还可以如下一样
@@ -34,8 +36,8 @@ print(list(s_1.index))  # [0, 1, 2, 3]
 
 print(s_1.values)  # [   1   22  333 4444]
 
-
-# 修改索引index
+# 查看到之后，就要介绍一pandas比较特殊的一点：索引的修改
+# 修改索引index。（需要注意的是，索引之间不能一样）
 s_1.index = ['b','c','d','e']
 s_2.index = list('BCDE')
 print(s_1)
@@ -70,7 +72,7 @@ print(s_1)
 
 
 # -----------------------------
-# 由列表创建series
+# 由字典创建series
 
 d = {
     'a':11,
